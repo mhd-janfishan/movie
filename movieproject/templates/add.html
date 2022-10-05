@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block body %}
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+
+  <input type="text" name="name" placeholder="enter movie name"><br>
+
+  <input type="text" name="desc" placeholder="enter the movie descrition "><br>
+
+  <input type="text" name="year" placeholder="released year"><br>
+
+  <input type="file" name="img"><br>
+  <button type="submit">submit</button>
+
+
+</form>
+{% endblock %}
+</body>
+</html>
